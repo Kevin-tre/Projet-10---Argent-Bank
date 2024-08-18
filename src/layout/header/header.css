@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.logo {
+    max-width: 100%;
+    width: 200px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.login-link {
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.text-sign-in {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
