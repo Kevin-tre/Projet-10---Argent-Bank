@@ -26,8 +26,13 @@ nav {
     text-decoration: underline;
 }
 
+.sign-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .text-sign-in {
     font-weight: bold;
     color: #2c3e50;
 }
-
