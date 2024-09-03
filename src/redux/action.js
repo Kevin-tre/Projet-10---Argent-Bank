@@ -4,10 +4,14 @@ import {
   loginUserRequest,
   loginUserSuccess,
   logoutUser,
+  updateUserFailed,
+  updateUserRequest,
+  updateUserSuccess,
 } from "./reducer";
 
 export const loginUser = (body, dispatch) => {
   dispatch(loginUserRequest());
+
   axios
     .post("http://localhost:3001/api/v1/user/login", body)
     .then((res) => {
@@ -35,6 +39,23 @@ export const getUser = (token, dispatch) => {
     });
 };
 
+export const updateUser = (token, body, dispatch) => {
+  dispatch(updateUserRequest());
+
+  axios
+    .put("http://localhost:3001/api/v1/user/profile", body, {
+      headers: { Authorization: "Bearer " + token },
+    })
+    .then(() => {
+      dispatch(updateUserSuccess());
+      getUser(token, dispatch);
+    })
+    .catch((err) => {
+      dispatch(updateUserFailed());
+    });
+};
+
 export const logoutUserAction = (dispatch) => {
+  localStorage.removeItem("token");
   dispatch(logoutUser());
 };

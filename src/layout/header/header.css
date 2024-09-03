@@ -14,12 +14,23 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5px;
+    /* gap: 5px; */
+}
+
+.login-link--icon {
+    font-weight: bold;
+    color: #2c3e50;
 }
 
 .login-link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     margin-right: 0.5rem;
+}
+
+.login-link--icon:hover {
+    text-decoration: none;
 }
 
 .login-link:hover {
