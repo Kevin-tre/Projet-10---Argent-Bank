@@ -19,6 +19,7 @@ body {
 
 .my-button {
   display: block;
+  width: 100%;
   padding: 8px;
   font-size: 1.1rem;
   font-weight: bold;
@@ -30,6 +31,7 @@ body {
 
 .my-button-disable {
   display: block;
+  width: 100%;
   padding: 8px;
   font-size: 1.1rem;
   font-weight: bold;
