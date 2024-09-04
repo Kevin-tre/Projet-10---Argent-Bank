@@ -28,7 +28,7 @@ export const loginUser = (body, dispatch) => {
 export const getUser = (token, dispatch) => {
   dispatch(loginUserRequest());
   axios
-    .post("http://localhost:3001/api/v1/user/profile", null, {
+    .get("http://localhost:3001/api/v1/user/profile", {
       headers: { Authorization: "Bearer " + token },
     })
     .then((res) => {
